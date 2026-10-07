@@ -1,0 +1,668 @@
+(kicad_sch
+	(version 20250610)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "00c650a5-df6c-52a8-be21-bb877eb7d946")
+	(paper "A4")
+	(title_block
+		(title "Relays (6 channels)")
+		(date "2026-10-05")
+		(rev "0.2")
+		(company "VanController")
+	)
+	(lib_symbols)
+	(sheet
+		(at 76.2 38.1)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bc0adf80-6c07-5b36-899e-45ebacd85a9f")
+		(property "Sheetname" "Relay1"
+			(at 76.2 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay_channel.kicad_sch"
+			(at 76.2 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 76.2 40.64 180)
+			(uuid "0e9ebdfe-5c72-562f-892c-635bc7e5a513")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 106.68 40.64 0)
+			(uuid "bfe86db4-298a-5cd6-993b-a571ed25912a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858"
+					(page "5")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 76.2 40.64)
+			(xy 71.12 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54c28235-d06e-5310-837a-b10a760432d6")
+	)
+	(hierarchical_label "RLY1"
+		(shape input)
+		(at 71.12 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "62d5b289-1103-5580-9c38-e0c1f1947620")
+	)
+	(wire
+		(pts
+			(xy 106.68 40.64)
+			(xy 111.76 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4217299b-53c0-5045-be0e-7e78bc3a13e8")
+	)
+	(hierarchical_label "RLY1_FUSE"
+		(shape output)
+		(at 111.76 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9cff052c-8e9e-54eb-8284-3f4b51ac6ad2")
+	)
+	(sheet
+		(at 152.4 38.1)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bf1ec584-e2c9-53f6-b25e-af77af5a92a6")
+		(property "Sheetname" "Relay2"
+			(at 152.4 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay_channel.kicad_sch"
+			(at 152.4 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 152.4 40.64 180)
+			(uuid "156f431b-15f0-53f1-9a89-3c293374fe57")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 182.88 40.64 0)
+			(uuid "a6b0d0e5-9b3c-5c6a-8147-c1532564557c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858"
+					(page "6")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 152.4 40.64)
+			(xy 147.32 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34535b33-94ea-5cbf-897d-ea24646ba884")
+	)
+	(hierarchical_label "RLY2"
+		(shape input)
+		(at 147.32 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5fde963d-9702-5bfc-adca-f06557e9edd3")
+	)
+	(wire
+		(pts
+			(xy 182.88 40.64)
+			(xy 187.96 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83608324-2555-5261-b863-0b36fa6e9487")
+	)
+	(hierarchical_label "RLY2_FUSE"
+		(shape output)
+		(at 187.96 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "826ee1e6-a507-5230-b20b-21ccaa1391e1")
+	)
+	(sheet
+		(at 76.2 68.58)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b9c8393e-5ab4-5dc6-b8e5-ec4d7e220de4")
+		(property "Sheetname" "Relay3"
+			(at 76.2 67.8684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay_channel.kicad_sch"
+			(at 76.2 74.2446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 76.2 71.12 180)
+			(uuid "09c50222-aac3-5d4c-a8b3-b69132b17362")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 106.68 71.12 0)
+			(uuid "3bda24c9-6361-5c3d-8b14-d92c328f9d29")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858"
+					(page "7")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 76.2 71.12)
+			(xy 71.12 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1008d6a-eaab-583b-833e-67f52d22898c")
+	)
+	(hierarchical_label "RLY3"
+		(shape input)
+		(at 71.12 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bea7da30-0b97-5f7a-bb46-a99d4b08d642")
+	)
+	(wire
+		(pts
+			(xy 106.68 71.12)
+			(xy 111.76 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d48a3e55-622f-594f-bda9-df6c2a114eb5")
+	)
+	(hierarchical_label "RLY3_FUSE"
+		(shape output)
+		(at 111.76 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "76d118f8-33a3-5dd4-9e96-e10f258e4a3e")
+	)
+	(sheet
+		(at 152.4 68.58)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "825474ea-4786-557f-a724-6f91812a3181")
+		(property "Sheetname" "Relay4"
+			(at 152.4 67.8684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay_channel.kicad_sch"
+			(at 152.4 74.2446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 152.4 71.12 180)
+			(uuid "b710705a-72df-518b-8dcf-bee34b10f4a6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 182.88 71.12 0)
+			(uuid "34934090-01b7-580b-9b85-a8aa44f9230f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858"
+					(page "8")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 152.4 71.12)
+			(xy 147.32 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a835285-4423-5fdb-990a-db67f028d400")
+	)
+	(hierarchical_label "RLY4"
+		(shape input)
+		(at 147.32 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "879e8df2-8482-5899-9818-c041ac32e051")
+	)
+	(wire
+		(pts
+			(xy 182.88 71.12)
+			(xy 187.96 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "970cdae5-f8c1-5599-a558-a7814d6a6fc0")
+	)
+	(hierarchical_label "RLY4_FUSE"
+		(shape output)
+		(at 187.96 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f24d0c7f-46f5-5893-ac6c-8dd86c8aeb2e")
+	)
+	(sheet
+		(at 76.2 99.06)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ec205e71-2bbe-548f-b2eb-59f628cace52")
+		(property "Sheetname" "Relay5"
+			(at 76.2 98.3484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay_channel.kicad_sch"
+			(at 76.2 104.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 76.2 101.6 180)
+			(uuid "f9d45974-b4d3-54cb-a586-53c3a6e598e5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 106.68 101.6 0)
+			(uuid "0e476c6f-7e9c-562f-80a7-b5b5649aa42f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858"
+					(page "9")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 76.2 101.6)
+			(xy 71.12 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "267961f3-c778-5715-8f68-38cef07d7a7f")
+	)
+	(hierarchical_label "RLY5"
+		(shape input)
+		(at 71.12 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0947bac7-72e4-564e-b13b-40ffbcfb9147")
+	)
+	(wire
+		(pts
+			(xy 106.68 101.6)
+			(xy 111.76 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76127402-1c94-5422-9cb8-eda9cb43343a")
+	)
+	(hierarchical_label "RLY5_FUSE"
+		(shape output)
+		(at 111.76 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7840c575-241f-5204-a80b-86cc475916bb")
+	)
+	(sheet
+		(at 152.4 99.06)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "03ce8bd4-3f6d-5c15-a6a6-cf05f7ea06f3")
+		(property "Sheetname" "Relay6"
+			(at 152.4 98.3484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "relay_channel.kicad_sch"
+			(at 152.4 104.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 152.4 101.6 180)
+			(uuid "1fbbf8e2-96ea-53b6-95b3-df9ebe261c5f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 182.88 101.6 0)
+			(uuid "8452da2a-ad57-52c9-8ca0-e84f48982257")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858"
+					(page "10")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 152.4 101.6)
+			(xy 147.32 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35ed872e-212d-5fe2-ab18-129357ce5c4d")
+	)
+	(hierarchical_label "RLY6"
+		(shape input)
+		(at 147.32 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "717c8fca-324a-5df8-aac6-212e77cdcb21")
+	)
+	(wire
+		(pts
+			(xy 182.88 101.6)
+			(xy 187.96 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fa1c1a4-9799-52e1-9c04-f97a3d71ca95")
+	)
+	(hierarchical_label "RLY6_FUSE"
+		(shape output)
+		(at 187.96 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "02561c4a-1dca-55d8-9398-aa89cc8bb52d")
+	)
+	(text "Six identical instances of relay_channel.kicad_sch. Edit that file once to change every channel."
+		(exclude_from_sim no)
+		(at 25.4 20.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "d022c129-d181-5327-b382-0e879773708b")
+	)
+	(embedded_fonts no)
+)

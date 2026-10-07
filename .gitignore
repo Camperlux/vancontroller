@@ -1,0 +1,20 @@
+# scratch and intermediate files
+build/
+*.kicad_prl
+*-backups/
+~*.lck
+fp-info-cache
+_autosave-*
+
+# downloaded tools (see README: get freerouting-1.9.0.jar from the Freerouting releases)
+tools/freerouting/*.jar
+__pycache__/
+
+# generated duplicates of committed folders
+manufacturing/*.zip
+
+# Fusion script run marker
+enclosure/.fusion_build_done
+
+# Fusion archives can carry Autodesk account metadata; the script recreates the design
+*.f3d

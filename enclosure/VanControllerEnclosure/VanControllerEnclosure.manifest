@@ -1,0 +1,10 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "author": "VanController",
+  "description": {
+    "": "Builds a 3D-printable enclosure (base + lid) for the VanController PCB and imports the PCB for a fit check."
+  },
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}

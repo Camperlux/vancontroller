@@ -1,0 +1,668 @@
+(kicad_sch
+	(version 20250610)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "57997ace-acbb-5f9e-aa65-4d7c364eac56")
+	(paper "A4")
+	(title_block
+		(title "Dimmers (6 channels)")
+		(date "2026-10-05")
+		(rev "0.2")
+		(company "VanController")
+	)
+	(lib_symbols)
+	(sheet
+		(at 76.2 38.1)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ad5a4e7b-b3d3-55cd-b1b1-e7e547be8377")
+		(property "Sheetname" "Dimmer1"
+			(at 76.2 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dimmer_channel.kicad_sch"
+			(at 76.2 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 76.2 40.64 180)
+			(uuid "db517d44-b5d7-5b8f-9bab-d912922d6697")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 106.68 40.64 0)
+			(uuid "199c520c-0873-56f7-8692-5edc6873aa42")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/7d322c8c-9d0d-58de-ac29-023fc380a284"
+					(page "12")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 76.2 40.64)
+			(xy 71.12 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e11c5b70-d67e-5dbb-a27b-ec463d0c0072")
+	)
+	(hierarchical_label "DIM1"
+		(shape input)
+		(at 71.12 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "03190819-d188-588e-9c19-71d6e103ce96")
+	)
+	(wire
+		(pts
+			(xy 106.68 40.64)
+			(xy 111.76 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "803d332b-958c-5fd7-addf-bd499775cf23")
+	)
+	(hierarchical_label "DIM1_FUSE"
+		(shape output)
+		(at 111.76 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1512edcd-2c26-5727-b8cb-002b234fd761")
+	)
+	(sheet
+		(at 152.4 38.1)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "79703a5e-4e6d-5061-9375-aec71796bcfd")
+		(property "Sheetname" "Dimmer2"
+			(at 152.4 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dimmer_channel.kicad_sch"
+			(at 152.4 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 152.4 40.64 180)
+			(uuid "a9290589-8690-521f-8c01-c91967cfbe7d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 182.88 40.64 0)
+			(uuid "fc0ea68d-ac0c-5803-885a-5509c3aeb18b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/7d322c8c-9d0d-58de-ac29-023fc380a284"
+					(page "13")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 152.4 40.64)
+			(xy 147.32 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fb4f6a3-36ac-5586-9834-a721b8d1967b")
+	)
+	(hierarchical_label "DIM2"
+		(shape input)
+		(at 147.32 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "28a36b83-6a8a-5e52-8d31-494a165f4bc6")
+	)
+	(wire
+		(pts
+			(xy 182.88 40.64)
+			(xy 187.96 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62c3fb3e-ea78-5d08-a75a-1267bc59d056")
+	)
+	(hierarchical_label "DIM2_FUSE"
+		(shape output)
+		(at 187.96 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c439a5d3-28b7-51c2-a5e3-1c7c74726f49")
+	)
+	(sheet
+		(at 76.2 68.58)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c9b8d008-98ac-52f1-9296-5d47c29f2b36")
+		(property "Sheetname" "Dimmer3"
+			(at 76.2 67.8684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dimmer_channel.kicad_sch"
+			(at 76.2 74.2446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 76.2 71.12 180)
+			(uuid "9b3088e4-30ba-53d2-bc73-6a3392d284b0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 106.68 71.12 0)
+			(uuid "ef5a1680-fb3b-5f55-84f1-2e4aaa04882c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/7d322c8c-9d0d-58de-ac29-023fc380a284"
+					(page "14")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 76.2 71.12)
+			(xy 71.12 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2166d050-ecab-5c5a-a23a-0fb388a41e29")
+	)
+	(hierarchical_label "DIM3"
+		(shape input)
+		(at 71.12 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1fb03436-ed57-5458-b6b7-f6a78c7df1e0")
+	)
+	(wire
+		(pts
+			(xy 106.68 71.12)
+			(xy 111.76 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70da5a38-fab6-523f-be7b-927d3e4d9f95")
+	)
+	(hierarchical_label "DIM3_FUSE"
+		(shape output)
+		(at 111.76 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b9275285-9b82-530a-ac3e-40ad45d35dce")
+	)
+	(sheet
+		(at 152.4 68.58)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fea32891-34dd-5c21-b428-b4a2e2adbf2f")
+		(property "Sheetname" "Dimmer4"
+			(at 152.4 67.8684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dimmer_channel.kicad_sch"
+			(at 152.4 74.2446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 152.4 71.12 180)
+			(uuid "1c4535d1-f670-5ce2-9646-0dcc3f2210ea")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 182.88 71.12 0)
+			(uuid "1dce5f8e-96b6-527a-ac38-2184a27309bf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/7d322c8c-9d0d-58de-ac29-023fc380a284"
+					(page "15")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 152.4 71.12)
+			(xy 147.32 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1c5d403-73da-5c47-943c-57e9a216626b")
+	)
+	(hierarchical_label "DIM4"
+		(shape input)
+		(at 147.32 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "191c362e-7f02-5c29-a67e-f23ea5f5275a")
+	)
+	(wire
+		(pts
+			(xy 182.88 71.12)
+			(xy 187.96 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "364a0b26-7e0a-5f34-92f1-1cfd5d50a6d0")
+	)
+	(hierarchical_label "DIM4_FUSE"
+		(shape output)
+		(at 187.96 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7aa7c260-2c77-5bdd-8525-3c234a64c960")
+	)
+	(sheet
+		(at 76.2 99.06)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6947341d-3b76-5948-b99a-473f91220f46")
+		(property "Sheetname" "Dimmer5"
+			(at 76.2 98.3484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dimmer_channel.kicad_sch"
+			(at 76.2 104.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 76.2 101.6 180)
+			(uuid "bf6172fa-4623-5a89-aa0d-bed0ce310df7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 106.68 101.6 0)
+			(uuid "afb6b112-bb12-5875-bcc8-fea3e300a442")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/7d322c8c-9d0d-58de-ac29-023fc380a284"
+					(page "16")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 76.2 101.6)
+			(xy 71.12 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2da61ddf-c2cd-585f-9149-d2271891cfbd")
+	)
+	(hierarchical_label "DIM5"
+		(shape input)
+		(at 71.12 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e3190c3c-38a2-5fa5-8d52-c6e67de7762e")
+	)
+	(wire
+		(pts
+			(xy 106.68 101.6)
+			(xy 111.76 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30038c8d-a4e9-5945-8ec7-02a08283d8c7")
+	)
+	(hierarchical_label "DIM5_FUSE"
+		(shape output)
+		(at 111.76 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e48ab604-b51d-534d-8528-3b06915d57c0")
+	)
+	(sheet
+		(at 152.4 99.06)
+		(size 30.48 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "82bf2411-58b4-55b8-84e1-128fc0b532c9")
+		(property "Sheetname" "Dimmer6"
+			(at 152.4 98.3484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dimmer_channel.kicad_sch"
+			(at 152.4 104.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CTRL" input
+			(at 152.4 101.6 180)
+			(uuid "218ade9a-36c5-5d31-b255-4aa7b457668d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FUSE_SENSE" output
+			(at 182.88 101.6 0)
+			(uuid "95c6984a-406e-54d3-8edd-9858e6e5787d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/7d322c8c-9d0d-58de-ac29-023fc380a284"
+					(page "17")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 152.4 101.6)
+			(xy 147.32 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ed97580-d738-5199-bdb4-4df2a5028ce7")
+	)
+	(hierarchical_label "DIM6"
+		(shape input)
+		(at 147.32 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "333f3080-fd4c-5c40-8336-82f673c4e1b2")
+	)
+	(wire
+		(pts
+			(xy 182.88 101.6)
+			(xy 187.96 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85768d2d-c0c2-543a-afbf-5cbde0792675")
+	)
+	(hierarchical_label "DIM6_FUSE"
+		(shape output)
+		(at 187.96 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a6d08165-ca78-51ab-8b1f-8f489e2d260d")
+	)
+	(text "Six identical instances of dimmer_channel.kicad_sch. Edit that file once to change every channel."
+		(exclude_from_sim no)
+		(at 25.4 20.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "c87c2b4a-bfc3-536f-9ee7-d25267180ffa")
+	)
+	(embedded_fonts no)
+)

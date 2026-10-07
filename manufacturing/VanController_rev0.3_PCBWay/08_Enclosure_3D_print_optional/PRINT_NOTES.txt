@@ -1,0 +1,5 @@
+Separate 3D printing order (optional).
+Material: MJF PA12 (nylon) preferred, or PETG/ASA FDM. Not PLA (van interior temperatures).
+Quantity: 1 x base + 1 x lid per assembled board. Units: mm. Outside 251 x 142 x 35 mm.
+Hardware (customer fits): 8 x M3 heat-set inserts (4.0 mm hole), 4 x M3x8 screws for the lid,
+4 x M3x6 screws for the PCB, 2 x M16 cable glands, 1 x SMA bulkhead to u.FL pigtail.

@@ -1,0 +1,8 @@
+*.kicad_pcb text eol=lf
+*.kicad_sch text eol=lf
+*.kicad_pro text eol=lf
+*.step -text
+*.stl -text
+*.f3d -text
+*.zip -text
+*.xlsx -text
