@@ -1490,6 +1490,197 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:SolderJumper_2_Bridged"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_2_Bridged"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Bridged*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Bridged_0_1"
+				(rectangle
+					(start -0.508 0.508)
+					(end 0.508 -0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 1.016)
+						(xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016)
+						(xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Bridged_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Relay:G5LE-1"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2592,7 +2783,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Relay channel. COM is fed from +12V through the channel fuse, so NO gives switched, fused +12 V. FUSE_SENSE is high (~2.8 V at 12 V) while the fuse is intact; BAT54S clamps transients to +3V3."
+	(text "Relay channel. COM is fed from +12V through the channel fuse, so NO gives switched, fused +12 V. FUSE_SENSE is high (~2.8 V at 12 V) while the fuse is intact; BAT54S clamps transients to +3V3. DRY CONTACT: remove the fuse and cut solder jumper SJ (DRY). COM/NO/NC then connect only to the relay contacts; FUSE_SENSE reads low (firmware: treat as dry-contact mode). Not rated for mains."
 		(exclude_from_sim no)
 		(at 20.32 15.24 0)
 		(effects
@@ -4302,7 +4493,7 @@
 		)
 		(uuid "e223eb30-3ea2-5d2b-b4c8-4d14b35a626d")
 	)
-	(label "OUT_F"
+	(label "SENSE_TAP"
 		(at 27.94 158.75 90)
 		(effects
 			(font
@@ -4808,6 +4999,176 @@
 			(justify right)
 		)
 		(uuid "ba055a45-6a9d-5485-9855-75ba63850526")
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Bridged")
+		(at 124.46 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "5f93901d-ad5a-55e1-ae9b-8fe05595766d")
+		(property "Reference" "SJ1"
+			(at 124.46 163.068 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRY (cut)"
+			(at 124.46 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
+			(at 124.46 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 124.46 171.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+			(at 124.46 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "solder jumper SPST"
+			(at 124.46 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SolderJumper*Bridged*"
+			(at 124.46 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "Bridged by default. Cut it (and remove the fuse) to make COM/NO/NC a dry contact."
+			(at 124.46 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b7217f3c-f6fe-5afb-be57-bf8bfbf10c1a")
+		)
+		(pin "2"
+			(uuid "227a8178-b40f-5f70-b186-0d6efe082c93")
+		)
+		(instances
+			(project "VanController"
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858/bc0adf80-6c07-5b36-899e-45ebacd85a9f"
+					(reference "SJ1")
+					(unit 1)
+				)
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858/bf1ec584-e2c9-53f6-b25e-af77af5a92a6"
+					(reference "SJ2")
+					(unit 1)
+				)
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858/b9c8393e-5ab4-5dc6-b8e5-ec4d7e220de4"
+					(reference "SJ3")
+					(unit 1)
+				)
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858/825474ea-4786-557f-a724-6f91812a3181"
+					(reference "SJ4")
+					(unit 1)
+				)
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858/ec205e71-2bbe-548f-b2eb-59f628cace52"
+					(reference "SJ5")
+					(unit 1)
+				)
+				(path "/a40173d8-9ce3-58d6-b907-2ebe6d892436/c3797fdd-53b5-5939-903b-7d05619c6858/03ce8bd4-3f6d-5c15-a6a6-cf05f7ea06f3"
+					(reference "SJ6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 119.38 165.1)
+			(xy 116.84 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9e971b7-45e5-57b3-80fe-52633a07519a")
+	)
+	(label "OUT_F"
+		(at 116.84 165.1 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f3111647-92f4-5539-be59-1754c8cf0669")
+	)
+	(wire
+		(pts
+			(xy 129.54 165.1)
+			(xy 132.08 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e3895f9-9255-5b46-9647-56069eb7ee25")
+	)
+	(label "SENSE_TAP"
+		(at 132.08 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "28cef213-178c-5fe7-a16b-9c640a3fc86d")
 	)
 	(symbol
 		(lib_id "power:GND")

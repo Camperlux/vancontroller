@@ -7,6 +7,7 @@
 | 2026-10-05 | Rev 0.3 board finished: routed, DRC clean, fab outputs generated. |
 | 2026-10-06 | Order package built (`tools/make_order_package.py` → `manufacturing/VanController_rev0.3_PCBWay/`). Quote configured on pcbway.com, saved to cart, files uploaded and submitted for engineering review. |
 | 2026-10-07 | PCBWay engineering questions received: solder-mask dams and X-ray (see below). |
+| 2026-10-14 | PCBWay quotation received (2 sets + 3 bare PCBs). PCBWay **cannot ship unmounted parts** with the boards (customs). Design updated to **rev 0.3a** (dry-contact jumpers): new Gerbers to send; BOM and centroid unchanged. |
 
 ### Cart items (submitted for review 2026-10-06; order numbers kept in the PCBWay account)
 
@@ -39,6 +40,17 @@ Files uploaded: `01_Gerbers_VanController_rev0.3.zip`, `02_BOM_VanController_rev
 | X-ray inspection for U9/U10/U11 (from the order notes) | **X-ray U9 (LIS3DH, LGA, hidden joints) only.** U10/U11 have visible leads, so AOI is enough. PCBWay asked to update the quote. |
 
 Lesson for the next revision: the order notes should state optional inspection requests as optional, and the design could use 0.19 mm or larger pad gaps where the footprint allows, to keep the mask dams.
+
+### Loose parts cannot be shipped (2026-10-14)
+
+PCBWay will not ship unmounted parts with the boards (customs clearance). This affects the 47 through-hole parts per board, the 16 Phoenix mating plugs and the 10 jumper shunts.
+
+- **Recommended:** let PCBWay **solder the through-hole parts** (about +$13 assembly; they already buy them). Buy the 16 Phoenix plugs (1757022 × 8, 1757019 × 8) and jumper shunts locally from Farnell, RS or Mouser. Optionally ask PCBWay to insert the plugs into their headers before shipping.
+- Decision: pending.
+
+### Rev 0.3a Gerbers
+
+The dry-contact change (SJ1-SJ6) is copper only. Send PCBWay the new `01_Gerbers_VanController_rev0.3.zip` from the package (silkscreen reads "rev 0.3a"), with the PCB question answers. The BOM and centroid file are unchanged.
 
 ### Open items with PCBWay
 

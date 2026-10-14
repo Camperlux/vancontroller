@@ -197,11 +197,16 @@ def relay_channel():
          Part("K", "Relay:G5LE-1", "G5LE-1-E DC12", "Relay_THT:Relay_SPDT_Omron-G5LE-1",
               {"5": "+12V", "2": "COIL_LO", "1": "OUT_F", "3": "NO", "4": "NC_OUT"}),
          TERM(3, ["NO", "OUT_F", "NC_OUT"], "NO / COM / NC")],
-        [R("33k", "OUT_F", "FUSE_SENSE"), R("10k", "FUSE_SENSE", "GND"), C("10nF", "FUSE_SENSE"),
-         BAT54S("FUSE_SENSE")],
+        [R("33k", "SENSE_TAP", "FUSE_SENSE"), R("10k", "FUSE_SENSE", "GND"), C("10nF", "FUSE_SENSE"),
+         BAT54S("FUSE_SENSE"),
+         Part("SJ", "Jumper:SolderJumper_2_Bridged", "DRY (cut)",
+              "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm", {"1": "OUT_F", "2": "SENSE_TAP"},
+              note="Bridged by default. Cut it (and remove the fuse) to make COM/NO/NC a dry contact.")],
     ]
     notes = ("Relay channel. COM is fed from +12V through the channel fuse, so NO gives switched, fused +12 V. "
-             "FUSE_SENSE is high (~2.8 V at 12 V) while the fuse is intact; BAT54S clamps transients to +3V3.")
+             "FUSE_SENSE is high (~2.8 V at 12 V) while the fuse is intact; BAT54S clamps transients to +3V3. "
+             "DRY CONTACT: remove the fuse and cut solder jumper SJ (DRY). COM/NO/NC then connect only to the relay "
+             "contacts; FUSE_SENSE reads low (firmware: treat as dry-contact mode). Not rated for mains.")
     return groups, notes
 
 

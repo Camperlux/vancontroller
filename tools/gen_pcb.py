@@ -302,7 +302,7 @@ def main():
     print("unplaced:", left or "none")
 
     # ---- silkscreen title
-    silk("VanController rev 0.3", 209.0, 131.0, 1.5)
+    silk("VanController rev 0.3a", 209.0, 131.0, 1.5)
 
     copper()
     pcbnew.SaveBoard(PCBFILE, board)

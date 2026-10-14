@@ -1,6 +1,6 @@
 # VanController: Design Spec and GPIO Map
 
-Status: rev 0.3. Schematic complete (ERC: 0 violations). 4-layer board fully routed (DRC: 0 errors, 0 unconnected; only the ESP32 silkscreen touching the board edge is flagged). Prototype order (5 PCBs, 2 SMD-assembled) submitted to PCBWay for review on 2026-10-06; see [docs/ORDER_LOG.md](docs/ORDER_LOG.md). Not yet verified on a physical build. Section 7 lists the open design checks.
+Status: rev 0.3a (rev 0.3 + dry-contact solder jumpers SJ1-SJ6, 2026-10-14). Schematic complete (ERC: 0 violations). 4-layer board fully routed (DRC: 0 errors, 0 unconnected; only the ESP32 silkscreen touching the board edge is flagged). Prototype order (5 PCBs, 2 SMD-assembled) submitted to PCBWay for review on 2026-10-06; see [docs/ORDER_LOG.md](docs/ORDER_LOG.md). Not yet verified on a physical build. Section 7 lists the open design checks.
 
 ## 1. Requirements and design decisions
 
@@ -8,7 +8,7 @@ Status: rev 0.3. Schematic complete (ERC: 0 violations). 4-layer board fully rou
 |---|---|---|
 | MCU | ESP32-S3, native USB | ESP32-S3-WROOM-1, USB-C with USBLC6 ESD |
 | Supply | 12 V vehicle, reverse polarity and load dump | 30 A ATO main fuse, SMDJ26CA bidirectional TVS, LM74700-Q1 ideal diode with 2 × CSD18540Q5B |
-| Relays | 6, fused, COM/NO/NC terminals | Omron G5LE (10 A), 10 A mini blade fuse per channel. COM is fed with fused +12 V |
+| Relays | 6, fused, COM/NO/NC terminals; optionally dry contacts | Omron G5LE (10 A), 10 A mini blade fuse per channel. COM is fed with fused +12 V by default; each channel converts to a dry contact (remove the fuse, cut solder jumper SJ) |
 | Dimmers | 6 low-side PWM, fused | BUK9M12-60EX (60 V logic-level), 5 A mini blade fuse, SS54 freewheel diode |
 | Comms | CAN + RS485 with switchable termination | TJA1051T/3 (3.3 V I/O); THVD1450 with termination and fail-safe bias jumpers |
 | Sensors | GPS, accelerometer, water level | MAX-M10S + u.FL active antenna; LIS3DH; ADS1115 with 2 jumper-selectable water inputs |
@@ -53,7 +53,7 @@ Fuse sense: each output is tapped after its fuse through 33k/10k (12 V → 2.8 V
 
 | Terminal | Pins (left to right as printed) |
 |---|---|
-| Relay 1-6 (top edge) | NC / COM / NO. COM is fused +12 V, so NO switches +12 V to the load |
+| Relay 1-6 (top edge) | NC / COM / NO. By default COM is fused +12 V, so NO switches +12 V to the load. In dry-contact mode COM/NO/NC are free contacts (see below) |
 | Dimmer 1-6 (top edge, right of the relays) | LOAD- (MOSFET drain) / LOAD+ (fused +12 V) |
 | Power input | M5 studs: +12V and GND |
 | CAN | CANH / CANL / GND. Jumper CAN TERM fits the split 120 Ω termination |
@@ -61,6 +61,19 @@ Fuse sense: each output is tapped after its fuse through 33k/10k (12 V → 2.8 V
 | Water 1-2 | SIG / GND. Fit ONE jumper per input: RESISTIVE (470 Ω pull-up), 4-20mA (150 Ω shunt) or 0-5V (10k/15k divider). No jumper = 0-3.3 V direct |
 
 All signal and load terminals are Phoenix MSTBA 2,5 headers (5.08 mm) with MSTB 2,5/x-ST-5,08 plugs.
+
+### Dry-contact mode (per relay channel)
+
+Each relay channel can switch a circuit that is not the van's 12 V, such as another battery bank, a signal input on other equipment or a separately fused supply:
+
+1. **Remove the channel's blade fuse** (F2-F7 for relays 1-6). This disconnects COM from the board's +12 V.
+2. **Cut solder jumper SJ1-SJ6** (marked SJn, between the relay and its fuse) with a sharp knife, across the thin copper link between its two pads. This disconnects the fuse-sense resistor from COM.
+
+COM, NO and NC then connect only to the relay contacts. The relay coil-to-contact isolation separates them from the board. To restore the default, bridge the SJ pads with solder and refit the fuse.
+
+- The firmware sees the channel's fuse-sense input low (as for a blown fuse). Treat it as dry-contact mode in configuration.
+- Fuse the external circuit externally: the board's channel fuse is out of circuit.
+- **Low voltage only (≤ 30 V DC).** The board's copper spacing is not designed for mains, so do not switch mains through the relays.
 
 ## 5. Schematic structure
 
@@ -94,7 +107,7 @@ Items 1, 2 and 8 are still open (tracked in [docs/ORDER_LOG.md](docs/ORDER_LOG.m
 
 - ESP32-S3 native USB (GPIO19/20) is the programming and debug port. BOOT = GPIO0 button, RESET = EN button. UART0 is also on header J4.
 - Relay and dimmer outputs default OFF at power-up (100k gate pull-downs). Drive the dimmers with LEDC at about 20 kHz.
-- Fuse status: read the TCA9535 at **0x21**. A low input means a blown or missing fuse. Its /INT on GPIO47 signals changes.
+- Fuse status: read the TCA9535 at **0x21**. A low input means a blown or missing fuse, or a relay channel set to dry-contact mode (configure which channels are dry so a low isn't reported as a fault). Its /INT on GPIO47 signals changes.
 - Input voltage: GPIO1 ADC, V_in = V_adc × 13 (120k/10k divider).
 - Water level: ADS1115 at 0x48, AIN0/AIN1. The scaling depends on which input jumper is fitted (see section 4).
 - Accelerometer LIS3DH at 0x19, INT1 on GPIO35 for wake-on-motion.
